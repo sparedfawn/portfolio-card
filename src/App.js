@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Header from "./components/Header";
+import MainContent from "./components/MainContent";
+import Footer from "./components/Footer";
+import Toggler from "./components/Toggler";
+import { Context } from "./Context";
+
+const App = () => {
+    const { theme } = useContext(Context);
+
+    return (
+        <div className="bg-dark flex flex-direction align-center py-15">
+            <Toggler />
+            <div className={`mw-317 flex flex-direction align-center my-35 br-10 section-bg-${theme}`}>
+                <Header />
+                <MainContent />
+                <Footer />
+            </div>
+        </div>
+    );
+};
 
 export default App;
