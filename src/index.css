@@ -254,20 +254,36 @@ p {
     width: 13px;
     border-radius: 50%;
     transition: 1s;
-    animation-duration: 1s;
 }
 
 .toggler-slider-circle-dark {
     background-color: black;
     margin-left: auto;
-    animation-name: slide-right;
-    animation-duration: 1s;
+    animation: slide-right 500ms;
 }
 
 .toggler-slider-circle-light {
     background-color: white;
     margin-left: 0;
-    animation-name: slide-left;
+    animation: slide-left 500ms;
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: 12px;
+    }
+    to {
+        margin-left: 0px;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        margin-left: 0px;
+    }
+    to {
+        margin-left: 12px;
+    }
 }
 
 .title-color-dark {
@@ -328,34 +344,6 @@ p {
 .footer-dark {
     background-color: #161619;
     transition: background-color 1000ms linear;
-}
-
-@keyframes slide-left {
-    from {
-        margin-left: auto;
-    }
-
-    50% {
-        margin-left: 50%;
-    }
-
-    to {
-        margin-left: 0;
-    }
-}
-
-@keyframes slide-right {
-    from {
-        margin-left: 0;
-    }
-
-    50% {
-        margin-left: 50%;
-    }
-
-    to {
-        margin-left: auto;
-    }
 }
 
 .box-shadow {

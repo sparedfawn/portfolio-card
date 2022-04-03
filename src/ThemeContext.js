@@ -16,4 +16,4 @@ const ContextProvider = ({ children }) => {
     );
 };
 
-export { ContextProvider, Context };
+export { ContextProvider as ThemeContextProvider, Context as ThemeContext };

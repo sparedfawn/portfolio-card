@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 
-import { Context } from "../Context";
+import { ThemeContext } from "../ThemeContext";
 
 const Toggler = () => {
-    const { theme, toggleTheme } = useContext(Context);
+    const { theme, toggleTheme } = useContext(ThemeContext);
 
     return (
         <div className="toggler">
